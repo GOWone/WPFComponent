@@ -1,21 +1,15 @@
 ﻿<Window
-    x:Class="WPFComponent.MainWindow"
+    x:Class="WPFComponent.Components.SplashWindow.SplashWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:WPFComponent"
+    xmlns:local="clr-namespace:WPFComponent.Components.SplashWindow"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="MainWindow"
+    Title="SplashWindow"
     Width="800"
     Height="450"
     AllowsTransparency="True"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
-    <Grid>
-        <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="50"
-            Text="HOME" />
-    </Grid>
+    <Grid />
 </Window>
