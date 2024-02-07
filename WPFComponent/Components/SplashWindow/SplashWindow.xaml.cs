@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WPFComponent.Components.SplashWindow
 {
@@ -19,9 +20,21 @@ namespace WPFComponent.Components.SplashWindow
     /// </summary>
     public partial class SplashWindow : Window
     {
+        DispatcherTimer timer = new DispatcherTimer();
         public SplashWindow()
         {
             InitializeComponent();
+            timer.Tick += new EventHandler(SplashEndEvent);
+            timer.Interval += new TimeSpan(0, 0, 13);
+            timer.Start();
+        }
+
+        private void SplashEndEvent(object sender, EventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            timer.Stop();
+            this.Close();
         }
     }
 }

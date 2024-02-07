@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFComponent.Components.SplashWindow;
 
 namespace WPFComponent
 {
@@ -23,6 +24,12 @@ namespace WPFComponent
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn_StartSplashWin(object sender, MouseButtonEventArgs e)
+        {
+            SplashWindow splashWindow = new SplashWindow();
+            splashWindow.Show();
         }
     }
 }
