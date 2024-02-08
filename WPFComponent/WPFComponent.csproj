@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Components\DropMenuWindow\DropMenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Components\SplashWindow\SplashWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -66,6 +70,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\DropMenuWindow\DropMenuWindow.xaml.cs">
+      <DependentUpon>DropMenuWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Components\SplashWindow\SplashWindow.xaml.cs">
       <DependentUpon>SplashWindow.xaml</DependentUpon>
@@ -100,6 +107,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icon\alarm-clock.png" />
+    <Resource Include="Assets\Icon\album-collection.png" />
+    <Resource Include="Assets\Icon\angle-small-down.png" />
+    <Resource Include="Assets\Icon\angle-small-right.png" />
+    <Resource Include="Assets\Icon\hard-hat.png" />
+    <Resource Include="Assets\Icon\layers.png" />
+    <Resource Include="Assets\Icon\layout-fluid.png" />
+    <Resource Include="Assets\Icon\mode-landscape.png" />
+    <Resource Include="Assets\Icon\select.png" />
+    <Resource Include="Assets\Icon\settings.png" />
+    <Resource Include="Assets\Icon\share.png" />
+    <Resource Include="Assets\Icon\thumbtack.png" />
+    <Resource Include="Assets\Icon\tools.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
